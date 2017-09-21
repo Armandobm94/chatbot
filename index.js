@@ -36,8 +36,8 @@ app.post('/webhook/',function(req,res){
             let text = event.message.text
             if(text.includes("Hola")){
             sendText(sender, "Como estas?")
-            }else if(text.includes("Como estas?")){
-            sendText(sender, "Aun soy un bot de prueba :(")
+            }else if(text.includes("bien")){
+            sendText(sender, "Yo aun soy un bot de prueba :(")
             }else{
             sendText(sender, "Me dijiste: " + text.substring(0,100))
             }
