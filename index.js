@@ -33,10 +33,10 @@ app.post('/webhook/',function(req,res){
         let event = messaging_events[i]
         let sender = event.sender.id
         if(event.message && event.message.text){
-            let text = event.message.text
-            if(text.includes("Hola")){
+            let text = event.message.text.toUpperCase()
+            if(text.includes("HOLA")){
             sendText(sender, "Como estas?")
-            }else if(text.includes("bien")){
+            }else if(text.includes("BIEN")){
             sendText(sender, "Yo aun soy un bot de prueba :(")
             }else{
             sendText(sender, "Me dijiste: " + text.substring(0,100))
