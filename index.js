@@ -44,6 +44,7 @@ app.post('/webhook/',function(req,res){
             console.log(text)
 
         }
+        console.log(event.message)
     }
     res.sendStatus(200)
 })
