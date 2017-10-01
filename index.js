@@ -41,7 +41,7 @@ app.post('/webhook/',function(req,res){
             }else{
             sendText(sender, "Me dijiste: " + text.substring(0,100))
             }
-            
+            console.log(text)
 
         }
     }
