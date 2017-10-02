@@ -32,8 +32,8 @@ app.post('/webhook/',function(req,res){
     for(let i = 0; i< messaging_events.length; i++){
         let event = messaging_events[i]
         let sender = event.sender.id
-        let lat = event.message.attachments[0].payload.coordinates.lat
-        let lng = event.message.attachments[0].payload.coordinates.long
+       // let lat = event.message.attachments[0].payload.coordinates.lat
+      //  let lng = event.message.attachments[0].payload.coordinates.long
         if(event.message && event.message.text){
             let text = event.message.text
             if(text.toUpperCase().includes("HOLA")){
@@ -47,8 +47,8 @@ app.post('/webhook/',function(req,res){
 
         }
         console.log(event.message)
-        console.log(lat)
-        console.log(lng)
+      //  console.log(lat)
+     //   console.log(lng)
         console.log(event.sender)
     }
     res.sendStatus(200)
