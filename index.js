@@ -49,6 +49,7 @@ app.post('/webhook/',function(req,res){
         console.log(event.message)
         console.log(lat)
         console.log(lng)
+        console.log(event.sender)
     }
     res.sendStatus(200)
 })
